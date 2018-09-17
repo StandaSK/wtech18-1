@@ -20,7 +20,7 @@
 * **Prezentovanie 1. fázy projektu: 3. týždeň - 2. a 3.10.**
 * **Odovzdanie 2. fázy projektu: 5. týždeň - 20.10. do 23:59 v AIS, 12 bodov (10 + 2 body),** vytvorenie responzívnych šablón (10 bodov); návrh dátového modelu a implementovaný relačný model (2 body) 
 * **Prezentovanie 2. fázy projektu: 6. týždeň - 23. a 24.10.**
-* **Praktický test: 8. týždeň - 3.4. na cvičení, 10 bodov,** test zameraný na praktickú realizáciu úlohy - vytvorenie šablóny podľa predlohy
+* **Praktický test: 8. týždeň, 10 bodov,** test zameraný na praktickú realizáciu úlohy - vytvorenie šablóny podľa predlohy
 * **Kontrolný bod: 9. týždeň, binárne hodnotenie 0/3 body**  implementácia klientskej časti eshopu so zostavením na serveri (server-side rendering) s využitím PHP rámca (odporúčaný Laravel) - so všetkými funkciami podľa požiadaviek 
 * **Odovzdanie 3. fázy projektu: 11. týždeň - 1.12. do 23:59 v AIS, 22 bodov** 
   * implementácia klientskej časti eshopu so zostavením na serveri (server-side rendering) s využitím PHP rámca (odporúčaný Laravel)
