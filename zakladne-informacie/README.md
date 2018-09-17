@@ -16,7 +16,7 @@
 
 ## Harmonogram 
 
-* **Odovzdanie 1. fázy projektu: 2. týždeň - 29.9. do 23:59 v AIS, 4 body,** vytvorenie skíc jednotlivých stránok pre XS (extra small) rozlíšenie (mobile first)
+* **Odovzdanie 1. fázy projektu: 2. týždeň - 29.9. do 23:59 v AIS, 4 body,** vytvorenie skíc jednotlivých stránok pre rozlíšenie podľa výberu (ideálne mobile first)
 * **Prezentovanie 1. fázy projektu: 3. týždeň - 2. a 3.10.**
 * **Odovzdanie 2. fázy projektu: 5. týždeň - 20.10. do 23:59 v AIS, 12 bodov (10 + 2 body),** vytvorenie responzívnych šablón (10 bodov); návrh dátového modelu a implementovaný relačný model (2 body) 
 * **Prezentovanie 2. fázy projektu: 6. týždeň - 23. a 24.10.**
