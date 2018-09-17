@@ -13,7 +13,7 @@
     * pozostávajúci aspoň z troch krokov, a to: sumarizácia daných položiek v košíku, výber dopravy a platby, dodacie údaje 
 * **prihlásenie a registrácia používateľa** (v prípade použitia "vyskakovacieho" panelu na prihlásenie sa používateľa je potrebné toto ilustrovať na niektorej z vytvorených stránok)
 
-**Vytvorte všetky skice pre jeden typ zariadení:**
+**Zvoľte si jeden typ zariadenia a vytvorte všetky skice:**
 * extra malé zariadenia/mobilné telefóny - do 576px
 * malé zariadenia/mobilné telefóny a tablety - do 768px
 * stredné zariadenia/tablety - do 992px
