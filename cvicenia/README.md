@@ -10,7 +10,12 @@
 2. [Príklady na precvičenie](2-c/#c2-priklady)
 
 **Cvičenie 3 (2-3.10.)**
-
+1. [HTML5: Responzívne obrázky - príklady na precvičenie](3-c/obrazky)
+2. [HTML5: Tabuľky - teória](3-c/tabulky)
+3. [HTML5: Tabuľky - príklady na precvičenie](3-c/tabulky#c3-tabulky-priklady)
+4. [HTML5: Formuláre - teória](3-c/formulare)
+5. [HTML5: Formuláre - príklady na precvičenie](3-c/formulare#c3-formulare-priklady)
+6. [PhpStorm - Live Edit](3-c/phpstorm-liveedit)
 
 **Cvičenie 4 (9-10.10.)**
 
