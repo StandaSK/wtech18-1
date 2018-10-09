@@ -20,8 +20,8 @@
 **Cvičenie 4 (9-10.10.)**
 1. [CSS: Základy, selektory, box model - príklady na precvičenie](4-c/zaklady-selektory)
 2. [CSS: Štýlovanie textu - teória](4-c/stylovanie-textu)
-3. [CSS: Štýlovanie textu - príklady na precvičenie](4-c/stylovanie-textu#c5-stylovanie-textu-priklady)
-4. [CSS: Rozloženie stránky - príklady na precvičenie](4-c/rozlozenie-stranky#c5-rozlozenie-stranky-priklady)
+3. [CSS: Štýlovanie textu - príklady na precvičenie](4-c/stylovanie-textu#c4-stylovanie-textu-priklady)
+4. [CSS: Rozloženie stránky - príklady na precvičenie](4-c/rozlozenie-stranky#c4-rozlozenie-stranky-priklady)
 
 **Cvičenie 5 (16-17.10.)**
 
