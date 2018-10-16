@@ -1,4 +1,8 @@
-# Cvičenie 5 - WAMP server
+# Cvičenie 5 - Prvý Laravel projekt, rozbehanie vlastného webového server
+
+Na spustenie Laravel aplikácie nie je potrebné rozbehávať vlastný webový server. Postačuje nainštalovať PHP a Composer a použiť zabudovaný webový server. Odporúčam vyskúšať rozbehať si vlastný webový server Apache s konfiguráciou virtuálnych hostov pre aplikácie. Balíček WAMP pre Windows zahŕňa komplet Apache + MySQL + PHP.
+
+## Laravel - zabudovaný web server (php artisan serve) ##
 
 1. Nainštalujte si [PHP](http://php.net/downloads.php#v7.2.11) + [Composer](https://getcomposer.org/download/). Po inštalácii nezabudnite zapnúť PHP rozšírenia [potrebné pre Laravel](https://laravel.com/docs/5.7/installation) v súbore `php.ini`:
       * OpenSSL PHP Extension
@@ -12,7 +16,7 @@
 3. Príkazom `php artisan serve` je možné vytvoriť inštanciu lokálneho webového servera a zároveň spustiť Laravel aplikáciu (musíte byť v priečinku aplikácie). 
 
 
-### Vyskúšajte si rozbehať vlastný webový server s virtual hostami ###
+## Vlastný webový server s virtual hostami - WAMP ##
    
 1. [Nainštalujte si WAMP server](https://www.how2shout.com/how-to/install-wamp-server-windows-10-step-by-step-tutorial-guide.html). Po inštalácii nezabudnite zapnúť PHP rozšírenia [potrebné pre Laravel](https://laravel.com/docs/5.7/installation):
    ![PHP rozšírenia](zdroje/wamp_php_extensions.png "PHP rozšírenia") 
