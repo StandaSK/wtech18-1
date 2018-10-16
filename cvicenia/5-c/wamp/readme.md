@@ -35,7 +35,9 @@
     </VirtualHost>
     ``` 
     
-    Skontrolujte tiež, či v súbore `httpd.conf` (pozri obrázok) je zapnutý modul `LoadModule rewrite_module modules/mod_rewrite.so`
+    Skontrolujte tiež, či v súbore `httpd.conf` 
+    ![httpd.conf](zdroje/wamp_httpd_conf.png "httpd.conf") 
+    je zapnutý modul `LoadModule rewrite_module modules/mod_rewrite.so`
  
 3. Ak beží Váš server na 127.0.0.1, porte 80 a aplikácia je v `C:\wamp\www\mylaravel`, stačí, keď v prehliadači zadáte `127.0.0.1`, resp. localhost - mala by sa spustiť Laravel aplikácia. 
 
@@ -57,4 +59,4 @@
     </VirtualHost>
     ``` 
 
-V prehliadači - v url adrese môžete použiť mylaravel.local. Analogicky si môžete vytvoriť niekoľko virtual hostov pre rôzne PHP (Laravel) aplikácie. 
+V prehliadači - v url adrese môžete použiť mylaravel.local. Analogicky si môžete vytvoriť ďalšie virtual hosty pre rôzne PHP (Laravel) aplikácie. 
