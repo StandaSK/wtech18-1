@@ -8,7 +8,7 @@
       * XML PHP Extension
       * Ctype PHP Extension
       * JSON PHP Extension
-2. V koreňovom priečinku `C:\wamp\www` vytvorte priečinok s názvom svojej Laravel aplikácie, napr. `mylaravel`. Vytvorte Laravel projekt - postupujte podľa krokov z prednášky, príp. [Laravel Installation](https://laravel.com/docs/5.7/installation)
+2. Vytvorte Laravel projekt - postupujte podľa krokov z prednášky, príp. [Laravel Installation](https://laravel.com/docs/5.7/installation)
 3. Príkazom `php artisan serve` je možné vytvoriť inštanciu lokálneho webového servera a zároveň spustiť Laravel aplikáciu (musíte byť v priečinku aplikácie). 
 
 
@@ -17,7 +17,9 @@
 1. [Nainštalujte si WAMP server](https://www.how2shout.com/how-to/install-wamp-server-windows-10-step-by-step-tutorial-guide.html). Po inštalácii nezabudnite zapnúť PHP rozšírenia [potrebné pre Laravel](https://laravel.com/docs/5.7/installation):
    ![PHP rozšírenia](zdroje/wamp_php_extensions.png "PHP rozšírenia") 
 
-2. V súbore `httpd-vhosts.conf` 
+2. V koreňovom priečinku `C:\wamp\www` vytvorte priečinok s názvom svojej Laravel aplikácie, napr. `mylaravel`. 
+
+3. V súbore `httpd-vhosts.conf` 
 
    ![Virtuálne hosty](zdroje/wamp_vhosts.png "Virtuálne hosty") 
 
@@ -41,9 +43,9 @@
     
     je zapnutý modul `LoadModule rewrite_module modules/mod_rewrite.so`
  
-3. Ak beží Váš server na 127.0.0.1, porte 80 a aplikácia je v `C:\wamp\www\mylaravel`, stačí, keď v prehliadači zadáte `127.0.0.1`, resp. localhost - mala by sa spustiť Laravel aplikácia. 
+4. Ak beží Váš server na 127.0.0.1, porte 80 a aplikácia je v `C:\wamp\www\mylaravel`, stačí, keď v prehliadači zadáte `127.0.0.1`, resp. localhost - mala by sa spustiť Laravel aplikácia. 
 
-4. V súbore ``C:\Windows\System32\drivers\etc\hosts`` si môžete nastaviť "host names" pre svoje PHP aplikácie - vytvárať tzv. [virtuálne hosty](https://miloserdov.org/?p=1186), napr. pridajte riadok:
+5. V súbore ``C:\Windows\System32\drivers\etc\hosts`` si môžete nastaviť "host names" pre svoje PHP aplikácie - vytvárať tzv. [virtuálne hosty](https://miloserdov.org/?p=1186), napr. pridajte riadok:
 
     ``127.0.0.1     mylaravel.local``
 
