@@ -30,7 +30,7 @@
 
 
 **Cvičenie 5 (16-17.10.)**
-* [Nainštalujte si WAMP server](5-c/wamp)
+* [Prvý Laravel projekt, rozbehanie vlastného webového serveru](5-c/wamp)
 * [PHP rýchlokurz](/prednasky/PHP-rychlokurz)
 * [PHP základy, Laravel - príklady na precvičenie](5-c/laravel-uvod)
 

@@ -101,3 +101,15 @@ Dokumentácia musí obsahovať minimálne tieto časti:
 * opis návrhu / návrhové rozhodnutia
 * prog. prostredie
 * opis implementácie jednotlivých prípadov použitia, snímky obrazoviek (angl. screenshot, snapshot) konečného  rozhrania
+
+
+## Spôsob hodnotenia
+### 2. fáza
+- šablóny vytvorené pre všetky požadované prípady použitia - 5b
+- správne použitie HTML 5 elementov - 2b
+- responzívny dizajn - 2b
+- formátovanie a logická štruktúra zdrojového kódu,
+konzistencia/jednotná konvencia pri názvosloví identifikátorov - 1b
+- databázový model - 2b
+
+**Študent musí vedieť vysvetliť ktorúkoľvek časť (kód) svojho riešenia.**
