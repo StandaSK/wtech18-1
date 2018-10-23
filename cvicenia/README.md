@@ -36,8 +36,8 @@
 
 
 **Cvičenie 6 (23-24.10.)**
-* [Laravel - Jednoduchý manažér úloh](/cvicenia/6-c/manazer-uloh)
 * [Laravel - Autentifikácia a autorizácia na základe role používateľa](/cvicenia/6-c/autentifikacia-rola)
+* [Laravel - Jednoduchý manažér úloh](/cvicenia/6-c/manazer-uloh)
 
 **7. týždeň - NEUČÍ SA**
 
