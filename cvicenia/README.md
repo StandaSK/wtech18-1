@@ -36,25 +36,27 @@
 
 
 **Cvičenie 6 (23-24.10.)**
+* [Laravel - Jednoduchý manažér úloh](/cvicenia/6-c/manazer-uloh)
+* [Laravel - Autentifikácia a autorizácia na základe role používateľa](/cvicenia/6-c/autentifikacia-rola)
+
+**7. týždeň - NEUČÍ SA**
+
+**Cvičenie 7 (6-7.11.)**
 
 
-**Cvičenie 7 (30?-31.10.)**
+**Cvičenie 8 (13-14.11.)**
 
 
-**Cvičenie 8 (6-7.11.)**
+**Cvičenie 9 (20-21.11.)**
 
 
-**Cvičenie 9 (13-14.11.)**
+**Cvičenie 10 (27-28.11.)**
 
 
-**Cvičenie 10 (20-21.11.)**
+**Cvičenie 11 (4-5.12.)**
 
 
-**Cvičenie 11 (27-28.11.)**
-
-
-**Cvičenie 12 (4-5.12.)**
-
+**Cvičenie 12 (11-12.12.)**
 
 
 
