@@ -43,6 +43,7 @@
 
 **Cvičenie 7 (6-7.11.)**
 * [Laravel - technológie - príklady na precvičenie](/cvicenia/7-c/)
+  * [Slajdy - Jednoduchý manažér úloh: pridanie ďalších technológií](/cvicenia/zdroje/7c-taskmanager-technologie.pptx)
 
 **Cvičenie 8 (13-14.11.)**
 
