@@ -42,7 +42,7 @@
 **7. týždeň - NEUČÍ SA**
 
 **Cvičenie 7 (6-7.11.)**
-
+* [Laravel - technológie - príklady na precvičenie](/cvicenia/7-c/)
 
 **Cvičenie 8 (13-14.11.)**
 
