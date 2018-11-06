@@ -14,7 +14,7 @@ Vytvoríme jednoduchú aplikáciu na vytváranie, zobrazovanie, editovanie a maz
 
 ## Vytvorenie modelu, migrácie a controller
 
-Vytvorme si novú (čistú) Laravel aplikáciu s názvom *TaskManager* ([postup, ako vytvoriť nový Laravel projekt nájdete v 5. prednáške](/prednasky/zdroje/05-WT-web-architektury-laravel-uvod.pdf)). Vytvorme si databázu, napr. s názvom `taskmanager`. V koreňovom priečinku projektu, v súbore `.env`, nastavme pripojenie na databázu:
+Vytvorme si novú (čistú) Laravel aplikáciu s názvom *TaskManager* ([postup, ako vytvoriť nový Laravel projekt nájdete v 5. prednáške](/prednasky/zdroje/05-WT-web-ssr-rest-laravel-uvod.pdf). Vytvorme si databázu, napr. s názvom `taskmanager`. V koreňovom priečinku projektu, v súbore `.env`, nastavme pripojenie na databázu:
 ```
 DB_CONNECTION=pgsql
 DB_HOST=127.0.0.1
