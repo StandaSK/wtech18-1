@@ -15,7 +15,7 @@
 6. [Laravel - základné koncepty architektúry, Blade, ORM (Eloquent), vzťahy medzi modelmi](zdroje/06-WT-laravel-koncepty-architetury-blade-orm-vztahy.pdf) (23.10.)
     
 7. [Laravel - sedenia (sessions), cache, validácia, logovanie, obsluha chýb (error handling), udalosti (events), autorizácia, lokalizácia (i18n), jednotkové testovanie (unit testing)](zdroje/07-WT-laravel-technologie.pdf) (6.11.)
-8. (13.11.)
+8. [JavaScript - úvod, základné konštrukcie, OO vs. funkcionálne programovanie (koncepty multiparadigmový, dynamický, prototypovací jazyk), objekty, dedenie (prototype chaining), vloženie JS, režimy vykonania JS, Web API, manipulácia s DOM, udalosti, delegovanie udalostí](zdroje/08-wt-js-uvod-objekty-webapi-udalosti.pdf) (13.11.)
 9. (20.11.) 
 10. (27.11.)
 11. (4.12.)
