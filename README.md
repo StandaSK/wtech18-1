@@ -13,5 +13,5 @@ Kurz Webové technológie poskytuje základné poznatky o architektúre webovýc
 
 ## Oznamy
 * 13.11. - [Aktualizácia harmonogramu odovzdania projektu s ohľadom na týžden voľna](zakladne-informacie/)
-* 13.11. - [Praktický test A - 13.11.](zdroje/prakticky-test-18-19-A.zip)
+* 13.11. - [Praktický test A](zdroje/prakticky-test-18-19-A.zip)
 
