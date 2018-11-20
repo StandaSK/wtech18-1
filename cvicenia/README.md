@@ -50,6 +50,8 @@
 * Praktický TEST
 
 **Cvičenie 9 (20-21.11.)**
+* [JS - Príklady na precvičenie](/cvicenia/9-c/)
+* [Mojá prvá Single Page alikácia vo Vue.js s využitím Quasar rámca](/cvicenia/9-c/PrvaSPA/)
 
 
 **Cvičenie 10 (27-28.11.)**
