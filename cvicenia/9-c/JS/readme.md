@@ -104,5 +104,5 @@ console.log(diag(4, 3)); // 5
 
 
 ### Príklad 5
-Vytvorte svoju prvú jednoduchú Vue.js aplikáciu - [počítadlo kliknutí na tlačídlo z prednášky](/prednasky/zdroje/10-wt-js-ajax-fetch-promises-storage-moduly-webpack-vuejs.pdf)
+Vytvorte svoju prvú jednoduchú Vue.js aplikáciu - [počítadlo kliknutí na tlačídlo z prednášky](/prednasky/zdroje/9-wt-js-ajax-fetch-promises-storage-moduly-webpack-vuejs-uvod.pdf)
 
