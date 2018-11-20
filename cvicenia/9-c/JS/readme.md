@@ -5,7 +5,27 @@
 ### Príklad 1
 Pripomeňte si z [8. prednášky spracovanie udalostí](/prednasky/zdroje/08-wt-js-uvod-objekty-webapi-udalosti.pdf) - **prebublanie** vs. **zachytenie**.
 
-Vyskúšajte si delegovanie udalosti prebublaním, ktoré ilustruje tento príklad:
+Vyskúšajte si prebublanie udalostí. Otvorte si konzolu a sledujte preblubanie. Keď napr. kliknete na element **three**, prebublanie aktivuje *onclick* obsluhu aj na elementoch *two* a *one*. 
+```html
+<div class=”one”>
+  ONE
+  <div class=”two”>
+    TWO
+    <div class=”three”>
+      THREE
+    </div>
+  </div>
+</div>
+```
+```js
+const divs = document.querySelectorAll('div');  
+function logClassName(event) {
+   console.log(this.classList.value);
+}
+divs.forEach(div => div.addEventListener('click', logClassName));
+````
+
+Vyskúšajte si tiež delegovanie udalosti prebublaním, ktoré ilustruje nasledujúci príklad. Uvedomte si, že listener registrujeme na ``#parent-list`` a nie na každú z položiek zoznamu.
 
 ```html 
 <ul id="parent-list">
