@@ -3,6 +3,8 @@
 ## Príklady na precvičenie
 
 ### Príklad 1
+Pripomeňte si z [8. prednášky spracovanie udalostí](/prednasky/zdroje/08-wt-js-uvod-objekty-webapi-udalosti.pdf) - **prebublanie** vs. **zachytenie**.
+
 Vyskúšajte si delegovanie udalosti prebublaním, ktoré ilustruje tento príklad:
 
 ```html 
@@ -27,11 +29,11 @@ document.querySelector("#parent-list").addEventListener("click", function(e) {
 ```
 
 ### Príklad 2
-Pripomeňte si [Fetch API z prednášky](/prednasky/zdroje/10-wt-js-ajax-fetch-promises-storage-moduly-webpack-vuejs.pdf), [vrátane ukážky](/prednasky/zdroje/priklady-ajax-fetch.zip). 
+Pripomeňte si [Fetch API z prednášky](/prednasky/zdroje/10-wt-js-ajax-fetch-promises-storage-moduly-webpack-vuejs.pdf), [vrátane ukážky](/prednasky/zdroje/priklady-ajax-fetch.zip). Pozn.: ukážka bude fungovať, ak pobeží v prostredí servera, nestačí otvoriť html súbor v prehliadači.
 
-V Jednoduchom manažéri úloh prerobte vymazanie úlohy tak, že použijete Fetch API. V zozname úloh po kliknutí na tlačidlo [Vymazať] sa vymaže daná úloha - vykoná sa `TaskController@destroy`. 
+V **Jednoduchom manažéri úloh** prerobte vymazanie úlohy tak, že použijete Fetch API. V zozname úloh po kliknutí na tlačidlo [Vymazať] sa vymaže daná úloha - vykoná sa `TaskController@destroy`. 
 
-V prípade úspešnej akcie, vymazanie záznamu sa prejaví aj priamo v DOM, a teda dynamicky odoberiete element reprezentujúci danú úlohu (použite DOM API, metódu `removeChild`). 
+V prípade úspešnej akcie, vymazanie záznamu sa prejaví aj priamo v DOM, a teda dynamicky odoberiete HTML element reprezentujúci danú úlohu (použite JS DOM API, metódu `removeChild`). 
 
 
 ### Príklad 3
@@ -104,5 +106,51 @@ console.log(diag(4, 3)); // 5
 
 
 ### Príklad 5
-Vytvorte svoju prvú jednoduchú Vue.js aplikáciu - [počítadlo kliknutí na tlačídlo z prednášky](/prednasky/zdroje/9-wt-js-ajax-fetch-promises-storage-moduly-webpack-vuejs-uvod.pdf)
+Vytvorte svoju prvú jednoduchú Vue.js aplikáciu - [počítadlo kliknutí na tlačídlo z prednášky](/prednasky/zdroje/09-wt-js-ajax-fetch-promises-storage-moduly-webpack-vuejs-uvod.pdf)
+
+```html
+<!doctype html>
+<html lang="sk">
+ 
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title></title>
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" href="images/favicon.png">
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+ 
+<body>
+<div id="vue-app">
+    <h1>{{ heading }}</h1>
+	<p>
+		{{ message }}
+	</p>
+	<button v-on:click="buttonClick()">Klikni na mna</button>
+	Klikli ste {{ clickCounter }}-krat.
+</div>
+ 
+<script>
+var app = new Vue({
+  el: '#vue-app',
+  data: {
+    heading: 'Pocitadlo kliknuti',
+    message: 'Tento komponent zobrazuje pocet kliknuti na tlacidlo',
+    clickCounter: 0
+  },
+  methods: {
+      buttonClick: function() {
+          this.clickCounter++;
+      }
+  }
+});
+</script>
+</body>
+ 
+</html>
+```
 
