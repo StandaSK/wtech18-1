@@ -65,11 +65,9 @@ Route::get('/users/list/', 'UserController@list');
   <q-page padding>
     <q-list highlight>
       <q-list-header>Users list</q-list-header>
-      <div v-for="user in users" v-bind:key="user.name">
-        <q-item>
+        <q-item v-for="user in users" v-bind:key="user.name">
           <q-item-main :label="user.name" />
         </q-item>
-      </div>
     </q-list>
   </q-page>
 </template>
