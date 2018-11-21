@@ -5,8 +5,9 @@
 
 **1**. [Stiahnite a nainštalujte si NPM (Node Package Manager)](https://nodejs.org/en/download/)
 
-**2.** Použitím NPM si nainštalujte Quasar CLI:
+**2.** Použitím NPM si nainštalujte Vue CLI a Quasar CLI:
 ```js
+npm install -g vue-cli
 npm install -g quasar-cli
 ```
 
@@ -16,7 +17,6 @@ quasar init <folder_name>
 ```
 Pri výzve "Check the features needed for your project" označte všetky možnosti, najmä však *Axios*.
 
-Pozn.: nie je potrebné inštalovať Vue.js, je už priamou súčasťou Quasar projektu.
 
 **4.** Quasar projekt spustíte z konzoly ``quasar dev``. Musíte sa nachádzať v priečinku projektu.
 
