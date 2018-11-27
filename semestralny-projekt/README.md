@@ -8,7 +8,7 @@ Vytvorte webovú aplikáciu - eshop, ktorá komplexne rieši nižšie definovan�
 * **Odovzdanie 1. fázy projektu: 2. týždeň - 29.9. do 23:59 v AIS, 4 body,** vytvorenie skíc jednotlivých stránok pre rozlíšenie podľa výberu (ideálne mobile first)
 * **Odovzdanie 2. fázy projektu: 5. týždeň - 20.10. do 23:59 v AIS, 12 bodov (10 + 2 body),** vytvorenie responzívnych šablón (10 bodov); návrh dátového modelu a implementovaný relačný model (2 body) 
 * **Kontrolný bod: 9. týždeň, binárne hodnotenie 0/4 body**  implementácia klientskej časti eshopu so zostavením na serveri (server-side rendering) s využitím PHP rámca (odporúčaný Laravel) - so všetkými funkciami podľa požiadaviek 
-* **Odovzdanie 3. fázy projektu: 11. týždeň - 1.12. do 23:59 v AIS, 20 bodov** 
+* **Odovzdanie 3. fázy projektu: 11. týždeň - 8.12. do 23:59 v AIS, 20 bodov** 
   * implementácia klientskej časti eshopu so zostavením na serveri (server-side rendering) s využitím PHP frameworku (odporúčaný Laravel); 
   * implementácia administrátorského panela/admin zóny so zostavením na klientovi (Single Page Application, client-side rendering) s využitím Vue rámca (odporúčaný Quasar) 
   * finálna dokumentácia
@@ -18,7 +18,7 @@ Vytvorte webovú aplikáciu - eshop, ktorá komplexne rieši nižšie definovan�
 V čase cvičení študent predvedie na svojom počítači svoje riešenie (fázy projektu), a to:
 * **Prezentovanie 1. fázy projektu: 3. týždeň - 2. a 3.10.**
 * **Prezentovanie 2. fázy projektu: 6. týždeň - 23. a 24.10.**
-* **Prezentovanie finálneho projektu: 12. týždeň - 4. a 5.12., a 13.týždeň - 11. a 12.12.**
+* **Prezentovanie finálneho projektu: 12. týždeň - 4. a 5.12.**
 
 
 ## Aplikácia - eshop
