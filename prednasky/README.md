@@ -19,7 +19,7 @@
     * [Ukážka - deklaratívne vs. imperatívne programovanie](zdroje/declarative-imperative.zip)
 9. [JavaScript - AJAX, Fetch API, sľuby (promises), lokálne úložisko (local storage), úložisko sedenia (session storage), IndexedDB, moduly - AMD, CommonJS, zavádzače, transpilátor, balíkovač (bundler), minifikácia, zamlženie kódu (obfuscation), Webpack, strict režim, Vue.js - úvod](zdroje/09-wt-js-ajax-fetch-promises-storage-moduly-webpack-vuejs-uvod.pdf) (20.11.)
     * [Ukážky - AJAX - XHR, Fetch API](zdroje/priklady-ajax-fetch.zip)
-10. (27.11.)
+10. [Vue.js - rektivita, základné konštrukcie, komponenty, dynamické/asynchrónne komponenty, hooks, udalosti, filtre, mixins, Vuex (store), rámec Quasar](zdroje/10-wt-vuejs.pdf) (27.11.)
 11. (4.12.)
 12. (11.12.)
 
