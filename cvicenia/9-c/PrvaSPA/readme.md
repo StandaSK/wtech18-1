@@ -1,4 +1,4 @@
-# Mojá prvá Single Page alikácia vo Vue.js s využitím Quasar rámca
+# Mojá prvá Single Page aplikácia vo Vue.js s využitím Quasar rámca
 
 
 ## Vytvorenie čistého Quasar projektu
