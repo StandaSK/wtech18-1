@@ -15,7 +15,7 @@ public function up() {
         $table->string('name');
         $table->text('description');
         $table->timestamps();
-        });
+    });
   
     DB::table('products')->insert([
         'name' => 'Product 1',
