@@ -56,7 +56,9 @@
 
 **Cvičenie 10 (27-28.11.)**
 
-**Využite čas cvičenia a pracujte na predošlých príkladoch - je dôležité nimi prejsť. Pozrite si prednášky, študujte aj dokumentáciu [Quasaru](https://quasar-framework.org/guide/) a [Vue.js](https://vuejs.org/).**  Začnite si v Quasare vytvárať vlastné ADMIN rozhranie. V priebehu tohto týždňa vám tu poskytnem tutoriál - pomôcku, ako takéto rozhranie vytvoriť a prepojiť ho s Laravel BE. Určite si ale prejdite tutoriálom [Moja Prvá SPA](/cvicenia/9-c/PrvaSPA/).
+**Využite čas cvičenia a pracujte na predošlých príkladoch - je dôležité nimi prejsť. Pozrite si prednášky, študujte aj dokumentáciu [Quasaru](https://quasar-framework.org/guide/) a [Vue.js](https://vuejs.org/).**  Začnite si v Quasare vytvárať vlastné ADMIN rozhranie. Určite si prejdite tutoriálom [Moja Prvá SPA](/cvicenia/9-c/PrvaSPA/).
+
+* **[ADMIN rozhranie - tutoriály](10-c)**
 
 
 **Cvičenie 11 (4-5.12.)**
