@@ -17,7 +17,7 @@ npm install -g quasar-cli
 ```js
 quasar init <folder_name>
 ```
-Pri výzve "Check the features needed for your project" označte všetky možnosti, najmä však *Axios*.
+Pri výzve "Check the features needed for your project" označte všetky možnosti, najmä však *Axios* a *vuex*.
 
 
 **4.** Quasar projekt spustíte z konzoly ``quasar dev``. Musíte sa nachádzať v priečinku projektu.

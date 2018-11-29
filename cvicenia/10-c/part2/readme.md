@@ -6,7 +6,7 @@ Pre *produkt* vytvoríme model, cotroller a migračný súbor:
 ``php artisan make:model Product -a``
 
 V migračnom súbore ``*_create_roles_table.php`` doplníme v metóde ``up()``
-*name* a *description* a testovacia dáta:
+*name* a *description* a testovacie dáta:
 
 ```php
 public function up() {
