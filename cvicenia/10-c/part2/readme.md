@@ -228,7 +228,7 @@ V ``$page`` si posielame aktuálne čislo stránky, ďalej cez *helper* ``reques
 V tomto momente by malo fungovať načítanie produktov do *q-table* s plnohodnotným stránkovaním a usporadúvaním podľa *name*.
 
 
-# TO BE CONTINUED
+# KONIEC 2. ČASTI ... TO BE CONTINUED
 
 
 
