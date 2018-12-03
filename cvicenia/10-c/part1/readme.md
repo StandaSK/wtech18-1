@@ -114,9 +114,10 @@ V súbore ``src/css/app.styl`` som si zadefinoval globálnu css triedu ``.c-cont
 
 **3.** Vytvoríme nový komponent ``<main-layout-drawer>``, ktorý bude v ``<q-layout-drawer>``. V tomto komponente budeme mať postranné menu.
 
-Vytvorte v priečinku ``src/components/`` priečinok ``layouts`` a následne priečinok ``Main``. Vytvorte súbor s názvom ``Drawer.vue``, ktorého obdah bude takýto:
+Vytvorte v priečinku ``src/components/`` priečinok ``layouts`` a následne priečinok ``Main``. Vytvorte súbor s názvom ``Drawer.vue``, ktorého obsah bude takýto:
 
 ```html
+<template>
 <div class="bg-grey-1 full-height q-px-md q-py-lg">
     <div class="q-subheading q-mb-sm">Products</div>
     <q-list link class="no-border">
@@ -133,15 +134,15 @@ Vytvorte v priečinku ``src/components/`` priečinok ``layouts`` a následne pri
 
 Používame komponent [``q-list``](https://quasar-framework.org/components/lists-and-list-items.html), ktorý v tomto prípade reprezentuje menu. Zatiaľ máme iba jednu kategóriu - *Products*, ktorá obsahuje položky *List* a *Create*. V prvom prípade sme po kliknutí presmerovaní na */products/index*, teda stránku so zoznamom produktov, v druhom prípade ide o stránku na vytvorenie nového produktu. 
 
-Všimnite si, že používame ďalšie helpre, napr. ``bg-grey-1`` (background color grey stupeň 1), ``q-subheading`` (štýl písma), `no-border` ( predvolený rámik sme vypli v ``q-list``).
+Všimnite si, že používame ďalšie helpre, napr. ``bg-grey-1`` (background color grey stupeň 1), ``q-subheading`` (štýl písma), `no-border` (v ``q-list`` sme vypli predvolený rámik).
 
 Uvedené smerovanie a stránky musíme zadefinovať. 
 
-**4.** Predtým však ešte v layoute *Main* pod element `<template>` vložte element `<script>`. Tu sa definuje prevažne správanie komponentu. Zatiaľ použijeme `import` na sprístupnenie komponentu *Drawer* v komponente (layoute) *Main*. 
+**4.** Predtým však ešte v layoute *Main* pod element `<template>` vložte element `<script>`. Na tomto mieste sa definuje prevažne správanie komponentu. Zatiaľ použijeme `import` na sprístupnenie komponentu *Drawer* v komponente (layoute) *Main*. 
 ```js
 <script>
 import MainLayoutDrawer from 'components/layouts/Main/Drawer.vue'
- 
+  
 export default {
   components: {
     MainLayoutDrawer
@@ -151,7 +152,7 @@ export default {
 ``` 
 Bez tohto importu by nemobolo možné komponent *Drawer* použiť.
 
-**5.** Vytvorme ešte (zatiaľ) prázdne súbory s podstránkami, a teda v priečinku ``src/pages/`` vytvorte priečinok ``products`` a v ňom tieto súbory:
+**5.** Vytvorme (zatiaľ) prázdne súbory s podstránkami, a teda v priečinku ``src/pages/`` vytvorte priečinok ``products`` a v ňom tieto súbory:
 * *Create.vue*
 * *Edit.vue*
 * *Index.vue*
@@ -212,7 +213,7 @@ export default routes
 
 ```
 
-Prvý záznam definuje - ak smerujeme na endpoint `/`, tak sme presmerovaní na `/products/index`.
+Prvý záznam nám definuje - ak smerujeme na endpoint `/`, tak sme presmerovaní na `/products/index`.
  
 Druhý záznam - ak smerujeme na `/products`, potom použi layout `layouts/Main` a v závislosti od zvyšku cesty použi predmetnú stránku. Ak teda smerujeme na endpoint `/products/index` použi v  layoute *Main* stránku ``pages/products/Index``. Analogicky *Create*.
  
@@ -227,13 +228,13 @@ Druhý záznam - ak smerujeme na `/products`, potom použi layout `layouts/Main`
  
  "Placeholder" ``<router-view>`` je špeciálny, do neho je zavedená predmetná stránka - v prípade smerovania na `/products/index` je teda zavedená stránka ``pages/products/Index``.
  
- Keď si pozornejšie prezriete ďalšie definície smerovania, môžete si všimnúť cestu ``/products/:id``. Ide o parameter, ku ktorému sa dá prístúpiť ``$route.params.id }}`` (viac neskôr).  Stránka `pages/products/Show` je zavedená do layoutu *Main* - napr. v prípade smerovania na `/products/24` a stránka `pages/products/Edit` v prípade `/products/24/edit`.
+ Keď si pozornejšie prezriete ďalšie definície smerovania, môžete si všimnúť cestu ``/products/:id``. Ide o parameter, ku ktorému sa dá prístúpiť (napr. ``{{ $route.params.id }}``, viac neskôr).  Stránka `pages/products/Show` je zavedená do layoutu *Main* - napr. v prípade smerovania na `/products/24`, podobne  stránka `pages/products/Edit`, keď smerujeme na `/products/24/edit`.
  
 
 ## Vuex - store, resp. state management
 
 Na prednáške sme si vysvetlili princíp `storu`.  
-Keď si opäť pozrieme podrobnejšie náš layout *Main*, môžeme si všimnúť, že je v ňom tlačidlo, ktorého úlohou je zobrazovať a skrývať bočný panel s menu:
+Keď si opäť pozrieme podrobnejšie náš layout *Main*, môžeme si všimnúť, že je v ňom tlačidlo, ktorého úlohou je zobrazovať a skrývať bočný panel s menu (má nastavený ``v-model="left"``):
 
 ```html
   <q-layout-header>
