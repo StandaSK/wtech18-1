@@ -267,7 +267,7 @@ Ako vidíme, je to šablóna skeletu našej Quasar aplikácie - pri builde sa "r
 
 Z priečinka `dist/spa-mat/` prekopírujte všetky priečinky (css, fonts, js, statics) do priečinka `public/` v Laravel aplikácii. 
 
-Týmto sme docielili, že keď zavoláme `http://127.0.0.1:8000` Laravel použije šablónu `welcome.blade.php`, zostaví HTML dokument s `csrf` tokenom - vygeneruje ho, prehliadač po stiahnutí HTML dokumentu posťahuje všetky zdroje - zostaví Quasar aplikáciu. Takto máme k dispozícii opäť SPA Quasar aplikáciu využívajúcu backend Laravelu, ktorá už má k dispozícii aj `csrf token`.  Otvorte si obsah HTML dokumentu, ktorý vrátil Laravel (hsROvb8UjtPRhgKA7g6sf7jkOZT2RA5fWsM2stsF):
+Týmto sme docielili, že keď zavoláme `http://127.0.0.1:8000` Laravel použije šablónu `welcome.blade.php`, zostaví HTML dokument s `csrf` tokenom - vygeneruje ho, prehliadač po stiahnutí HTML dokumentu posťahuje všetky zdroje - zostaví Quasar aplikáciu. Takto máme k dispozícii opäť SPA Quasar aplikáciu využívajúcu backend Laravelu, ktorá už má k dispozícii aj `csrf token`.  Otvorte si obsah HTML dokumentu, ktorý vrátil Laravel (obsahuje token, napr. hsROvb8UjtPRhgKA7g6sf7jkOZT2RA5fWsM2stsF):
 
 ```html
 <!DOCTYPE html>
