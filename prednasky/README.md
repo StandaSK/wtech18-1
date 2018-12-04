@@ -15,12 +15,18 @@
 6. [Laravel - základné koncepty architektúry, Blade, ORM (Eloquent), vzťahy medzi modelmi](zdroje/06-WT-laravel-koncepty-architetury-blade-orm-vztahy.pdf) (23.10.)
     
 7. [Laravel - sedenia (sessions), cache, validácia, logovanie, obsluha chýb (error handling), udalosti (events), autorizácia, lokalizácia (i18n), jednotkové testovanie (unit testing)](zdroje/07-WT-laravel-technologie.pdf) (6.11.)
+
 8. [JavaScript - úvod, základné konštrukcie, OO vs. funkcionálne programovanie (koncepty multiparadigmový, dynamický, prototypovací jazyk), objekty, dedenie (prototype chaining), vloženie JS, režimy vykonania JS, Web API, manipulácia s DOM, udalosti, delegovanie udalostí](zdroje/08-wt-js-uvod-objekty-webapi-udalosti.pdf) (13.11.)
     * [Ukážka - deklaratívne vs. imperatívne programovanie](zdroje/declarative-imperative.zip)
 9. [JavaScript - AJAX, Fetch API, sľuby (promises), lokálne úložisko (local storage), úložisko sedenia (session storage), IndexedDB, moduly - AMD, CommonJS, zavádzače, transpilátor, balíkovač (bundler), minifikácia, zamlženie kódu (obfuscation), Webpack, strict režim, Vue.js - úvod](zdroje/09-wt-js-ajax-fetch-promises-storage-moduly-webpack-vuejs-uvod.pdf) (20.11.)
+
     * [Ukážky - AJAX - XHR, Fetch API](zdroje/priklady-ajax-fetch.zip)
 10. [Vue.js - rektivita, základné konštrukcie, komponenty, dynamické/asynchrónne komponenty, hooks, udalosti, filtre, mixins, Vuex (store), rámec Quasar](zdroje/10-wt-vuejs.pdf) (27.11.)
-11. (4.12.)
+
+11. [Node.js, Vue.js - zostavenie na strane servera (server-side rendering), prerendering, hydratácia (client-side hydration), Sails.js, websockety, Sass preprocesor](zdroje/11-wt-nodejs-ssr-sailsjs-websocket-sass.pdf) (4.12.)
+    * [Ukážka - Vue.js - server-side rendering](zdroje/vue-ssr.js)
+    
 12. (11.12.)
+ * PREBERANIE PROJEKTU
 
 

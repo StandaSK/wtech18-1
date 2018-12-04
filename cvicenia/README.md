@@ -59,12 +59,17 @@
 **Využite čas cvičenia a pracujte na predošlých príkladoch - je dôležité nimi prejsť. Pozrite si prednášky, študujte aj dokumentáciu [Quasaru](https://quasar-framework.org/guide/) a [Vue.js](https://vuejs.org/).**  Začnite si v Quasare vytvárať vlastné ADMIN rozhranie. Určite si prejdite tutoriálom [Moja Prvá SPA](/cvicenia/9-c/PrvaSPA/).
 
 * **[ADMIN rozhranie - tutoriály](10-c)**
+    * **1. časť**: [vytvorenie základných šablón pre ADMIN rozhranie eshopu](10-c/part1)
+    * **2. časť**: [zoznam produktov - backend v Laraveli a jeho prepojenie s komponentom Index](10-c/part2)
 
 
 **Cvičenie 11 (4-5.12.)**
-
+* **[ADMIN rozhranie - tutoriály](11-c)**
+    * **3. časť**: [vymazanie produktu](11-c/part3)
+    * **4. časť**: [pridanie a editovanie produktu](11-c/part4) 
 
 **Cvičenie 12 (11-12.12.)**
+* Prezentovanie a preberanie projektu
 
 
 
