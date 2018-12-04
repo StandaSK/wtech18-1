@@ -38,9 +38,9 @@ export default {
 </script>
 ``` 
 
-Vidíme, že cez XHR (axios) metódu `post` voláme endpoint `/products`, ktorému odosielamé údaje produktu - `productData`, čo je `computed property`, ktorá zostavuje objekt z `productName` a `productDescription`. Po úspešnom vytvorení projektu sme "presmerovaní" na `/products/{ID PROJEKTU}/edit`
+Vidíme, že cez XHR (axios) HTTP metódu `post` voláme endpoint `/products`, ktorému odosielamé údaje produktu - `productData`, čo je `computed property`, ktorá zostavuje objekt z `productName` a `productDescription`. Po úspešnom vytvorení projektu sme "presmerovaní" na `/products/{ID PROJEKTU}/edit`
 
-V šablóne nastavíme vstupným poliam `name` a `description` *v-model*, čím (reaktívne) prepojíme model (dáta) so šablónou (vstupnými poliami). Pri akejkoľvek zmene niektorého zo vstupných polí je automaticky aktualizovaný objekt `productData`:
+V šablóne nastavíme *v-model* vstupným poliam `name` a `description`, čím (reaktívne) prepojíme model (dáta) so šablónou (vstupnými poliami). Pri akejkoľvek zmene niektorého zo vstupných polí je automaticky aktualizovaný objekt `productData`:
 
 ```html
 <template>
@@ -75,7 +75,7 @@ V šablóne nastavíme vstupným poliam `name` a `description` *v-model*, čím 
 </template>
 ```
 
-Na tlačidlo `Create` naviažeme udalosť click, ktorá zavolá metódu `createProduct`. 
+Na tlačidlo `Create` naviažeme udalosť *click* s volaním metódy `createProduct`. 
 
 Na backende v `ProductController` vytvoríme službu `store`:
 ```php
@@ -100,16 +100,16 @@ Route::post('products/', 'ProductController@store');
 ```
 
 ### Ajax loading bar
-[Quasar ajax bar](https://quasar-framework.org/components/ajax-bar.html) je komponent, ktorý indikuje načítavanie - niečo podobné ako používa napr. YouTube (keď si dáte prehrať nejaké video, tak sa zobrazí pod address barom prehliadača červená čiara, ktorá sa rozširuje a indikuje tým načítavanie a progres). 
+[Quasar ajax bar](https://quasar-framework.org/components/ajax-bar.html) je komponent, ktorý indikuje načítavanie - niečo podobné ako používa napr. YouTube (keď si dáte prehrať nejaké video, tak sa zobrazí pod address barom prehliadača červená čiara, ktorá sa rozširuje a indikuje tým načítavanie). 
 
-Použitie tohto komponentu je veľmi jednoduché. Do `/quasar.conf.js` pridajme `QAjaxBar`. V komponente (layoute) `Main.vue` pod `<router-view></router-view>` pridajme:
+Integrovanie tohto komponentu do našej Quasar aplikácie je veľmi jednoduché. Do `/quasar.conf.js` pridajme `QAjaxBar`. V komponente (layoute) `Main.vue` pod `<router-view></router-view>` pridajme:
 
 ```html
 <router-view></router-view>
 <q-ajax-bar />
 ```
 
-Takouto jednoduchou integráciou zabezpečíme, že ajax bar sa spustí automaticky pri každom AJAXovom volaní a zastaví sa (dobehne) po prijatí odpovede. 
+Ajax bar sa spustí automaticky pri každom AJAXovom volaní a zastaví sa (dobehne) po prijatí odpovede. 
  
  
 ## Editovanie produktu
@@ -165,7 +165,7 @@ Spomeňte si z prednášky na životný cyklus Vue.js komponentu, alebo si [pozr
 
 Vytvoríme metódu `updateProduct`, v ktorej voláme HTTP metódou `put` endpoint `/products/{ID PRODUCT}` a odosielame informácie o produkte. Ošetrovanie možných chýb ponechávam na vás. 
 
-Va šablóne komponentu nastavíme vstupným poliam `v-model` a na tlačidlo `Update` naviažeme udalosť `click` s volaním metódy `updateProduct`:
+V šablóne komponentu nastavíme vstupným poliam `v-model` a na tlačidlo `Update` naviažeme udalosť `click` s volaním metódy `updateProduct`:
 ```html
 <template>
 <div class="q-my-xl">
@@ -226,6 +226,6 @@ Route::get('products/{product}/edit', 'ProductController@edit');
 Route::put('products/{product}', 'ProductController@update');
 ```
 
-Nahrávanie obrázkov k produktom ponechám na vás. Malý hint, v komponente [`q-uploader`](https://quasar-framework.org/components/uploader.html) skryte *upload button* (atribút `hide-upload-button`) a `upload()` volajte v metóde `createProduct` (resp. `updateProduct`). Vytvorte si BE službu na nahrávanie obrázkov. Vytvorte produkt `store`, nahrajte fotografie, a `id`, ktoré vráti služba `store` použite na prepojenie nahratých fotografií s produktom v DB.
+Nahrávanie obrázkov k produktom ponechám na vás. Malý hint, v komponente [`q-uploader`](https://quasar-framework.org/components/uploader.html) skryte *upload button* (atribút `hide-upload-button`) a `upload()` volajte v metóde `createProduct` (resp. `updateProduct`). Vytvorte si BE službu na nahrávanie obrázkov. Upravte metódu `createProduct` tak, že najskôr vytvoríte produkt (služba `store`), nahráte fotografie, a `id`, ktoré vráti služba `store` použijete na prepojenie nahratých fotografií s produktom v DB.
 
 # KONIEC 

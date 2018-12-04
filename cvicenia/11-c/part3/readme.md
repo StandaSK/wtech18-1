@@ -38,7 +38,7 @@ methods: {
     })
   }
 ```
-V metóde vyvoláme dialogové okno (s príslušným nastavením a správami). Ide o typický *promise*, teda definujeme tiež, čo sa má vykonať v prípade úspechu (resolve - kliknutie na tlačidlo OK), a čo v prípade odmietnutia (reject - kliknutie na tlačidlo Cancel). V našom prípade sa po kliknutí na tlačidlo *OK* zobrazí na 2s pozitívna notifikácia so správou `The product has been deleted`.
+V metóde vyvoláme dialogové okno (s príslušným nastavením a správami). Ide o typický *promise*, teda definujeme, čo sa má vykonať v prípade úspechu (resolve - kliknutie na tlačidlo OK), a čo v prípade odmietnutia (reject - kliknutie na tlačidlo Cancel). V našom prípade sa po kliknutí na tlačidlo *OK* zobrazí na 2s pozitívna notifikácia so správou `The product has been deleted`.
 
 Potrebujeme samozrejme vytvoriť na BE službu, ktorá zrealizuje vymazanie.
 
@@ -85,7 +85,7 @@ destroy (id, name, rowIndex) {
 ```
 
 Použili sme metódu `delete` (*axios.delete*), voláme endpoint `/products/${id}`. 
-Za povšimnutie stojí kód `this.serverData[rowIndex].id = 'DELETED'`. Problém je, že keď na BE vymažeme daný záznam, na FE v *q-table* sa tento záznam bude stále nacházať. Riešenie je - aktualizovať `serverData` pre danú stránku - pri zmazaní si vypýtame zo servera aj nový zoznam produktov pre danú stránku. V našom riešení iba označíme daný záznam za vymazaný. Uvedené (krajšie) riešenie ponechám na vás.
+Za povšimnutie stojí kód `this.serverData[rowIndex].id = 'DELETED'`. Problém je, že keď na BE vymažeme daný záznam, na FE v *q-table* (`serverData`) zostane. Riešenie je - aktualizovať `serverData` pre aktuálnu stránku tabuľky - a teda pri zmazaní produktu si vypýtame zo servera aj nový zoznam produktov pre danú stránku. V našom riešení iba označíme daný záznam za vymazaný. Uvedené (krajšie) riešenie ponechám na vás.
 
 Potrebujeme spraviť malé zmeny v šablóne komponentu `Index`:
 ```html
@@ -124,11 +124,11 @@ V poslednom stĺpci sme pridali podmienku `v-if`, resp. `v-else`.
 
 ### Problém zvaný CSRF
 O [CSRF](https://developer.mozilla.org/en-US/docs/Glossary/CSRF) sme si hovorili na prednáške.  
-Problém je, že keď sa teraz pokúsime nejaký produkt vymazať, Laravel nám vráti 419 (unknown status). Je to preto, že Laravel pri `delete` metóde očakáva `csrf_token`, ktorý nám (pôvodne) poskytol. Je potrebné mu ho pri požiadavke poslať. Spomeňte si - v Blade šablóne sme pri formulároch museli uviesť `{{ csrf_field() }}`. Pri každom odoslaní predmetného formulára sme teda zároveň posielali Laravelu aj `csrf token`, ktorý nám on sám pri zostavení formulára poskytol - vygeneroval.
+Problém je, že keď sa teraz pokúsime nejaký produkt vymazať, Laravel nám vráti 419 (unknown status). Je to preto, že Laravel pri `delete` metóde očakáva `csrf_token`, ktorý nám (pôvodne) poskytol. Je potrebné mu ho pri požiadavke poslať , čím sa "legitimizujeme". Spomeňte si - v Blade šablóne sme pri formulároch museli uviesť `{{ csrf_field() }}`. Pri každom odoslaní predmetného formulára sme teda zároveň posielali Laravelu aj `csrf token`, ktorý nám on sám pri zostavení formulára poskytol - vygeneroval.
 
-Problém je, že v našom prípade rozhranie zostavuje Quasar (Vue.js) - Laravel sa nijako nepričiňuje, inými slovami naša Quasar aplikácia nemá k dispozícii `csrf token` od Laravelu pri jej zostavovaní. Lenže ak ho Laravelu neposkytne pri požiadavkách na služby, nemôže naša aplikácia zrelizovať `delete` (ani `post`, atď., okrem `get`). 
+Problém je, že v našom prípade rozhranie zostavuje Quasar (Vue.js) - Laravel sa nijako nepričiňuje, inými slovami naša Quasar aplikácia nemá k dispozícii `csrf token` od Laravelu pri jej zostavovaní. Quasar dokonca vytvára server (`quasar dev`). Lenže, ak `csrf token` Laravelu neposkytneme pri požiadavkách na služby, nemôže naša aplikácia zrealizovať `delete` (ani `post`, atď., okrem `get`). 
 
-Jedno z rýchlych riešení je, že pojdete do súboru `app/Http/Kernel.php`, kde zakomentujte `\App\Http\Middleware\VerifyCsrfToken::class` z:
+Jedno z rýchlych riešení je, že pojdeme do súboru `app/Http/Kernel.php`, kde zakomentujeme  middleware`\App\Http\Middleware\VerifyCsrfToken::class` z:
 ```php
 protected $middlewareGroups = [
         'web' => [
@@ -144,15 +144,14 @@ protected $middlewareGroups = [
         ...
     ];
 ``` 
-
-Toto môžete spraviť maximálne v DEV prostredí!!! V produkcii určite nie, nie, nie!!!
+Laravel prestane robiť verifikáciu `csrf tokenu`. Toto môžeme spraviť maximálne v DEV prostredí!!! V produkcii určite nie, nie, nie!!!
 
 Ďalšia možnosť je, že našu Quasar aplikáciu zbuildujeme a tento build bude súčasťou Laravel aplikácie. Zároveň nastavíme Laravel tak, aby nám zostavoval - servíroval skelet pre našu Quasar aplikáciu, ktorého súčasťou bude vygenerovaný `csrf token`. Ukážme si, ako na to...
 
 V našej Quasar aplikácii v priečinku `src/` otvorme súbor `index.template.html`.
 Je to HTML skelet našej Quasar aplikácie. Do `<div id="q-app"></div>` sa zostavuje naša Quasar aplikácia - je to element koreňového komponentu. 
 
-Upravme túto šablónu tak, že do nej pridáme `csrf token` - ten nám bude poskytovať (generovať) Laravel, ktorý ho očakáva pri požiadavkách (post, delete...):
+Upravme túto šablónu tak, že do nej pridáme `csrf token` - ten nám bude poskytovať (generovať) Laravel, ktorý ho očakáva pri HTTP požiadavkách (post, delete...):
 ```html
 <!DOCTYPE html>
 <html>
@@ -182,7 +181,7 @@ Upravme túto šablónu tak, že do nej pridáme `csrf token` - ten nám bude po
 </html>
 ```
 
-Chceme, aby nám Laravel - keď zavoláme endpoint `http://127.0.0.1:8000` - vrátil HTML dokument založený na tejto šablóne a vygeneroval do nej `csrf token`. Budeme mať tak k dispozícii skelet našej Quasar aplikácie a zároveň `csrf token`, ktorý môže Quasar aplikácia posielať pri každej požiadavke Laravel backendu. 
+Chceme, aby nám Laravel - keď zavoláme endpoint `http://127.0.0.1:8000` - vrátil HTML dokument založený na tejto šablóne a vygeneroval do nej `csrf token`. Budeme mať tak k dispozícii skelet našej Quasar aplikácie a zároveň `csrf token`, ktorý môže Quasar aplikácia posielať pri každej požiadavke Laravel službám. 
 
 Vidíme ale, že v šablóne nie sú žiadne skripty s našou Quasar aplikáciou, a teda prehliadač nemá čo zostaviť (akú Quasar aplikáciu zostaví?). Skripty na Quasar aplikáciu sa pridajú do šablony po jej zbuildovaní.
 
@@ -224,7 +223,7 @@ V Laraveli do `routes/web.php` pridáme:
 Route::view('/', 'welcome');
 ```
 
-V `resources/views/` vytvoríme šablónu `welcome.blade.php`. Do tejto šablóny skopírujeme obsah súboru `dist/spa-mat/index.html`. Obsah súboru je takýto:
+V `resources/views/` vytvoríme šablónu `welcome.blade.php`. Do tejto šablóny skopírujeme obsah súboru `dist/spa-mat/index.html`, ktorý je takýto:
 ```html
 <!DOCTYPE html>
 <html>
@@ -263,11 +262,11 @@ V `resources/views/` vytvoríme šablónu `welcome.blade.php`. Do tejto šablón
 </html>
 ```
 
-Ako vidíme, je to šablóna skeletu našej Quasar aplikácie - pri builde sa "rozdrobila" na viacero menších skriptov. Je tam ale všetko, čo treba a aj fragmenty pre `csrf token`. 
+Ako vidíme, je to šablóna skeletu našej Quasar aplikácie, ktorá sa pri builde "rozdrobila" na viacero menších skriptov. Je tam ale všetko, čo treba a aj fragmenty pre `csrf token`. 
 
 Z priečinka `dist/spa-mat/` prekopírujte všetky priečinky (css, fonts, js, statics) do priečinka `public/` v Laravel aplikácii. 
 
-Týmto sme docielili, že keď zavoláme `http://127.0.0.1:8000` Laravel použije šablónu `welcome.blade.php`, zostaví HTML dokument s `csrf` tokenom - vygeneruje ho, prehliadač po stiahnutí HTML dokumentu posťahuje všetky zdroje - zostaví Quasar aplikáciu. Takto máme k dispozícii opäť SPA Quasar aplikáciu využívajúcu backend Laravelu, ktorá už má k dispozícii aj `csrf token`.  Otvorte si obsah HTML dokumentu, ktorý vrátil Laravel (obsahuje token, napr. hsROvb8UjtPRhgKA7g6sf7jkOZT2RA5fWsM2stsF):
+Týmto sme docielili, že keď zavoláme `http://127.0.0.1:8000` Laravel použije šablónu `welcome.blade.php`, zostaví HTML dokument (skelet Quasar aplikácie) s `csrf` tokenom - vygeneruje ho, prehliadač po stiahnutí HTML dokumentu posťahuje všetky zdroje - zostaví Quasar aplikáciu. Máme SPA Quasar aplikáciu využívajúcu služby Laravelu, ktorá už má k dispozícii aj `csrf token`.  Otvorte si obsah HTML dokumentu, ktorý vrátil Laravel - obsahuje token:
 
 ```html
 <!DOCTYPE html>
@@ -305,8 +304,10 @@ Týmto sme docielili, že keď zavoláme `http://127.0.0.1:8000` Laravel použij
 </html>
 ```
 
-Pripomínam, keď ste v DEV režime, môžete CSRF DOČASNE v Laraveli vypnúť.
+Pripomínam, keď ste v DEV režime, môžete CSRF DOČASNE v Laraveli vypnúť. Keď máte aplikáciu hotovú, vytvoríte produkčnú verziu Quasar aplikácie (`quasar build`), vložíte ju do Laravel aplikácie a CSRF zapnete. 
 
+
+Celý proces sa dá aj zautomatizovať a mať Quasar dev verziu aplikácie ako súčasť Laravelu - pogooglite trochu ;) 
 BTW: Keď presuniete Quasar aplikáciu k Laravelu, bežia na rovnakej doméne a odpadá problém s CORS. 
 
 # KONIEC 3. ČASTI ... TO BE CONTINUED
