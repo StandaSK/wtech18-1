@@ -85,7 +85,7 @@ destroy (id, name, rowIndex) {
 ```
 
 Použili sme metódu `delete` (*axios.delete*), voláme endpoint `/products/${id}`. 
-Za povšimnutie stojí kód `this.serverData[rowIndex].id = 'DELETED'`. Problém je, že keď na BE vymažeme daný záznam, na FE v *q-table* sa tento záznam bude stále nacházať. Možné riešenie je, vymazať ho zo `serverData` - potom je však potrebné znovu prepočítať stránky tabuľky, čo môže vizuálne zmiasť používateľa. Preferujem preto menej agresívnu formu, a to označiť daný záznam za vymazaný - stránkovanie sa tým nezmení. Pri opätovnom zostavení tabuľky už v nej daný záznam nebude.
+Za povšimnutie stojí kód `this.serverData[rowIndex].id = 'DELETED'`. Problém je, že keď na BE vymažeme daný záznam, na FE v *q-table* sa tento záznam bude stále nacházať. Riešenie je - aktualizovať `serverData` pre danú stránku - pri zmazaní si vypýtame zo servera aj nový zoznam produktov pre danú stránku. V našom riešení iba označíme daný záznam za vymazaný. Uvedené (krajšie) riešenie ponechám na vás.
 
 Potrebujeme spraviť malé zmeny v šablóne komponentu `Index`:
 ```html
@@ -145,7 +145,7 @@ protected $middlewareGroups = [
     ];
 ``` 
 
-Toto môžete spraviť maximálne v DEV prostredí!!! V produkcii určite neodporúčam!!!
+Toto môžete spraviť maximálne v DEV prostredí!!! V produkcii určite nie, nie, nie!!!
 
 Ďalšia možnosť je, že našu Quasar aplikáciu zbuildujeme a tento build bude súčasťou Laravel aplikácie. Zároveň nastavíme Laravel tak, aby nám zostavoval - servíroval skelet pre našu Quasar aplikáciu, ktorého súčasťou bude vygenerovaný `csrf token`. Ukážme si, ako na to...
 
