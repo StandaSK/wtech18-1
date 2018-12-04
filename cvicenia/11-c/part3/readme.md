@@ -304,7 +304,7 @@ Týmto sme docielili, že keď zavoláme `http://127.0.0.1:8000` Laravel použij
 </html>
 ```
 
-Pripomínam, keď ste v DEV režime, môžete CSRF DOČASNE v Laraveli vypnúť. Keď máte aplikáciu hotovú, vytvoríte produkčnú verziu Quasar aplikácie (`quasar build`), vložíte ju do Laravel aplikácie a CSRF zapnete. 
+Pripomínam, keď ste v DEV prostredí, môžete CSRF DOČASNE v Laraveli vypnúť. Keď máte aplikáciu hotovú, vytvoríte produkčnú verziu Quasar aplikácie (`quasar build`), vložíte ju do Laravel aplikácie a CSRF zapnete. 
 
 
 Celý proces sa dá aj zautomatizovať a mať Quasar dev verziu aplikácie ako súčasť Laravelu - pogooglite trochu ;) 
