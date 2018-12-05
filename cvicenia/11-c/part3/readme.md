@@ -310,4 +310,6 @@ Pripomínam, keď ste v DEV prostredí, môžete CSRF DOČASNE v Laraveli vypnú
 Celý proces sa dá aj zautomatizovať a mať Quasar dev verziu aplikácie ako súčasť Laravelu - pogooglite trochu ;) 
 BTW: Keď presuniete Quasar aplikáciu k Laravelu, bežia na rovnakej doméne a odpadá problém s CORS. 
 
+Otázkou je, čo v prípade, keď Quasar aplikácia a Laravel služby (backend) nebudú spolunažívať. V tomto prípade vystavíme naše služby doslova ako API. Keď definujeme smerovanie našich služieb v `routes/web.php`, potom je všetkým *smerovaniam* priradená `web` middleware skupina definovaná v `Kernel.php`, kde sa nachádza aj spomínaná verifikácia `CSRF`, a teda smerovania definované vo `web.php` musia prejsť aj touto verifikáciou. V prípade ale, že vystavíme naše služby ako API, máme možnosť definovať smerovanie v `routes/api.php`. Tieto smerovania spadajú pod `api` middleware skupinu. Keď si pozrieme súbor `Kernel.php`, v `api` skupine nie je registrovaná žiadna `CSRF` verifikácia, a teda nie je potrebný `csrf token`.
+
 # KONIEC 3. ČASTI ... TO BE CONTINUED
