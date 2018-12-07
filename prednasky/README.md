@@ -23,7 +23,7 @@
     * [Ukážky - AJAX - XHR, Fetch API](zdroje/priklady-ajax-fetch.zip)
 10. [Vue.js - rektivita, základné konštrukcie, komponenty, dynamické/asynchrónne komponenty, hooks, udalosti, filtre, mixins, Vuex (store), rámec Quasar](zdroje/10-wt-vuejs.pdf) (27.11.)
 
-11. [Node.js, Vue.js - zostavenie na strane servera (server-side rendering), prerendering, hydratácia (client-side hydration), Sails.js, websockety, Sass preprocesor](zdroje/11-wt-nodejs-ssr-adonisjs-websocket-sass.pdf) (4.12.)
+11. [Node.js, Express.js, Vue.js - zostavenie na strane servera (server-side rendering), prerendering, hydratácia (client-side hydration), websockety, Adonis.js, Sass preprocesor](zdroje/11-wt-nodejs-ssr-adonisjs-websocket-sass.pdf) (4.12.)
     * [Ukážka - Vue.js - server-side rendering](zdroje/vue-ssr.js)
     
 12. (11.12.)
